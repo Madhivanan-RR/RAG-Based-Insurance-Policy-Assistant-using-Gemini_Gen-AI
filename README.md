@@ -1,6 +1,6 @@
----
-
 ### File 1: Production-Ready `README.md` (For GitHub)
+
+Save the block below as **`README.md`**:
 
 ```markdown
 # 🛡️ RAG-Based Insurance Policy Assistant
@@ -21,28 +21,30 @@ Built using **Streamlit**, **LangChain (LCEL)**, **Chroma DB**, **HuggingFace Em
 
 ## 🏗️ System Architecture & Pipeline
 
-```text
+
+```
+
 [ Local Policy JSON ]
-         │
-         ▼
+│
+▼
 [ Chunking & Metadata Enrichment (LangChain Document Objects) ]
-         │
-         ▼
+│
+▼
 [ HuggingFace Embeddings (all-MiniLM-L6-v2 - 384d Vectors) ]
-         │
-         ▼
+│
+▼
 [ Chroma DB Vector Store (Persistent Local Directory ./chroma_store) ]
-         │
-         ▼
+│
+▼
 [ Dense Vector Similarity Search (Top-k Retrieval: k=3) ]
-         │
-         ▼
+│
+▼
 [ Grounded System Prompt Guardrails (Zero Hallucination Constraint) ]
-         │
-         ▼
+│
+▼
 [ Meta Llama 3.2 LLM (Local Execution via Ollama) ]
-         │
-         ▼
+│
+▼
 [ Interactive UI Dashboard (Streamlit Frontend + FAQ Buttons) ]
 
 ```
@@ -61,9 +63,9 @@ Built using **Streamlit**, **LangChain (LCEL)**, **Chroma DB**, **HuggingFace Em
 ## 🛠️ Technology Stack
 
 | Layer | Component / Tool | Usage |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | **Frontend UI** | Streamlit | Chat interface, status badges, and interactive layout |
-| **Framework** | LangChain (LCEL) | End-to-end orchestration chain (`Retriever | Prompt | LLM | Parser`) |
+| **Framework** | LangChain (LCEL) | End-to-end orchestration chain (`Retriever \| Prompt \| LLM \| Parser`) |
 | **Embedding Engine** | HuggingFace (`all-MiniLM-L6-v2`) | Generates 384-dimensional dense semantic vectors |
 | **Vector Store** | Chroma DB | Local vector indexing and cosine/L2 distance search |
 | **Generator LLM** | Meta Llama 3.2 (via Ollama) | Local open-weights model for response synthesis |
@@ -74,11 +76,9 @@ Built using **Streamlit**, **LangChain (LCEL)**, **Chroma DB**, **HuggingFace Em
 ## 📋 Prerequisites & Local Setup
 
 ### 1. Install & Launch Ollama
-
 Download and install Ollama from [ollama.com](https://ollama.com).
 
 Open your terminal and pull the Llama 3.2 model:
-
 ```bash
 ollama pull llama3.2
 
